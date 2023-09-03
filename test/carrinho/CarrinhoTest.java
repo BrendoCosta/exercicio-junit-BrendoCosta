@@ -75,5 +75,14 @@ public class CarrinhoTest {
         Assertions.assertEquals(0, this.car.getQtdeItems());
 
     }
+
+    @DisplayName("Testa a exceção de produto não encontrado")
+	@Test
+    public void testProdutoNaoEncontrado() {
+        
+        Produto prod = new Produto("Produto Teste", 10);
+        Assertions.assertThrows(ProdutoNaoEncontradoException.class, () -> this.car.removeItem(prod));
+
+    }
     
 }
