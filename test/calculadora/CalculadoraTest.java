@@ -27,6 +27,15 @@ public class CalculadoraTest {
 		int soma = calc.soma(4, 5);		
 		Assertions.assertEquals(9, soma);		
 	}
+
+	@DisplayName("Testa a subtração de dois números")
+	@Test
+	public void testSubtracaoDoisNumeros() {
+
+		int subtracao = calc.subtracao(49, 7);
+		Assertions.assertEquals(42, subtracao);
+
+	}
 	
 	@Test
 	public void testDivisaoDoisNumeros() {
