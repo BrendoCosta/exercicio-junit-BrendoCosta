@@ -37,6 +37,15 @@ public class CalculadoraTest {
 
 	}
 
+	@DisplayName("Testa a multiplicação de dois números")
+	@Test
+	public void testMultiplicacao() {
+
+		int multiplicacao = calc.multiplicacao(-1, -1);
+		Assertions.assertEquals(1, multiplicacao);
+
+	}
+
 	@DisplayName("Testa a soma dos inteiros de 0 até 100")
 	@Test
 	public void testSomatoria() {
