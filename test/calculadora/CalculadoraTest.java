@@ -45,6 +45,16 @@ public class CalculadoraTest {
 		Assertions.assertEquals(5050, somatorio);
 
 	}
+
+	@DisplayName("Testa sinais dos números")
+	@Test
+	public void testSinais() {
+
+		Assertions.assertFalse(calc.ehPositivo(-1));
+		Assertions.assertTrue(calc.ehPositivo(0));
+		Assertions.assertTrue(calc.ehPositivo(1));
+
+	}
 	
 	@Test
 	public void testDivisaoDoisNumeros() {
