@@ -64,6 +64,16 @@ public class CalculadoraTest {
 		Assertions.assertTrue(calc.ehPositivo(1));
 
 	}
+
+	@DisplayName("Testa comparação entre números")
+	@Test
+	public void testComparacao() {
+
+		Assertions.assertEquals(0, calc.compara(2, 2));
+		Assertions.assertEquals(1, calc.compara(4, 1));
+		Assertions.assertEquals(-1, calc.compara(3, 9));
+
+	}
 	
 	@Test
 	public void testDivisaoDoisNumeros() {
