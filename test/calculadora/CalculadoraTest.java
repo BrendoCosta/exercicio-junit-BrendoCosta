@@ -36,6 +36,15 @@ public class CalculadoraTest {
 		Assertions.assertEquals(42, subtracao);
 
 	}
+
+	@DisplayName("Testa a soma dos inteiros de 0 até 100")
+	@Test
+	public void testSomatoria() {
+
+		int somatorio = calc.somatoria(100);
+		Assertions.assertEquals(5050, somatorio);
+
+	}
 	
 	@Test
 	public void testDivisaoDoisNumeros() {
