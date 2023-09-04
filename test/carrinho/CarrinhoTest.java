@@ -84,5 +84,25 @@ public class CarrinhoTest {
         Assertions.assertThrows(ProdutoNaoEncontradoException.class, () -> this.car.removeItem(prod));
 
     }
+
+    @DisplayName("Testa o valor total dos itens no carrinho")
+	@Test
+	public void testComparacao() {
+
+        final double PRECO_PRODUTO_A = 24.90;
+        final double PRECO_PRODUTO_B = 17.85;
+        final double PRECO_PRODUTO_C = 42.50;
+
+        Produto produtoA = new Produto("Produto A", PRECO_PRODUTO_A);
+        Produto produtoB = new Produto("Produto B", PRECO_PRODUTO_B);
+        Produto produtoC = new Produto("Produto C", PRECO_PRODUTO_C);
+
+        this.car.addItem(produtoA);
+        this.car.addItem(produtoB);
+        this.car.addItem(produtoC);
+
+        Assertions.assertEquals(PRECO_PRODUTO_A + PRECO_PRODUTO_B + PRECO_PRODUTO_C, this.car.getValorTotal());
+
+	}
     
 }
